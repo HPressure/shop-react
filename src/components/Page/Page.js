@@ -1,16 +1,22 @@
 import React from "react";
+import { cn } from "@bem-react/classname";
 
 import "./Page.scss";
 
 import Header from "../Header/Header";
 import ProductsContent from "../ProductsContent/ProductsContent";
 function Page() {
+  const Page = cn("Page");
   return (
     <>
-      <Header />
-      <main className="Page-Main">
+      <div className={Page("Header")}>
+        <Header />
+      </div>
+
+      <main className={Page("Main")}>
         <ProductsContent />
       </main>
+      <footer className={Page("Footer")}></footer>
     </>
   );
 }

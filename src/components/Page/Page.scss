@@ -1,7 +1,26 @@
 .Page {
+  display: flex;
+  flex-flow: column;
   .Page-Header {
+    flex: 0;
   }
   .Page-Main {
-    min-height: 100%;
+    position: relative;
+    min-height: 2000px;
+    flex: 1;
+    border-radius: 10px;
+    background: green;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      height: 12px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+  .Page-Footer {
+    flex: 0;
   }
 }
