@@ -5,15 +5,19 @@
   "proxy": "https://my-json-server.typicode.com/hpressure/fake-db/",
   "dependencies": {
     "@bem-react/classname": "^1.5.6",
+    "@bem-react/classnames": "^1.3.7",
     "@bem-react/core": "^2.0.6",
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "fibers": "^4.0.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "sass": "^1.25.1-test.1",
     "typescript": "^3.7.4"
   },
   "scripts": {

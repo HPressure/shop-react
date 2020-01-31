@@ -4,16 +4,34 @@
   background: red;
   min-width: 100%;
   overflow: hidden;
-  background: #481173
-    url("data:image/svg+xml,%3Csvg%20width%3D%221245%22%20height%3D%221245%22%20viewBox%3D%220%200%201245%201245%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Ccircle%20cx%3D%22622.5%22%20cy%3D%22622.5%22%20r%3D%22622.5%22%20fill%3D%22%23631174%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22622.5%22%20cy%3D%22622.5%22%20r%3D%22622.5%22%20fill%3D%22url(%23paint0_linear)%22%2F%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%2239%22%20y1%3D%22907.5%22%20x2%3D%221262.5%22%20y2%3D%22548%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23CB11AB%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23631174%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E") -5%
-    center/55% auto no-repeat;
-  .Header-NavTop {
+  background: linear-gradient(
+    90deg,
+    rgba(72, 17, 115, 1) 0%,
+    rgba(253, 29, 29, 1) 71%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  .Header-Top {
     position: relative;
-
-    .Header-NavTop-Logo {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    .Header-Top-Logo {
+    }
+    .Header-Top-Search {
+      width: 100%;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .Header-Top-UserMenu {
+      display: flex;
+      .Header-Top-UserMenu-Item {
+        color: #fff;
+        font-size: 2rem;
+      }
     }
   }
-  .Header-NavBottom {
+  .Header-Bottom {
     display: flex;
     flex-wrap: wrap;
   }

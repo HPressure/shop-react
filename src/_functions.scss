@@ -1,0 +1,3 @@
+@function media-type($type) {
+  @return map-get($media, $type);
+}

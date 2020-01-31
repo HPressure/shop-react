@@ -1,0 +1,28 @@
+.SearchBar {
+  display: flex;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: inherit;
+  border-radius: 4px;
+  padding: 0.4em 0.8em;
+  transition: background 0.3s ease-in;
+  .SearchBar-Input {
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  .SearchBtn {
+  }
+  &.active {
+    background: rgba(255, 255, 255, 1);
+    transition: none;
+    cursor: text;
+    pointer-events: none;
+  }
+  &:hover {
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
