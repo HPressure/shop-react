@@ -3,9 +3,9 @@
   background: rgba(255, 255, 255, 0.5);
   font-size: inherit;
   border-radius: 4px;
-  padding: 0.4em 0.8em;
+  padding: 0.4em 0.4em 0.4em 0.8em;
   transition: background 0.3s ease-in;
-  .SearchBar-Input {
+  #{&}-Input {
     cursor: pointer;
     border: none;
     background: none;
@@ -14,7 +14,11 @@
       color: #fff;
     }
   }
-  .SearchBtn {
+  #{&}-SearchBtn {
+    color: #fff;
+  }
+  #{&}-PicBtn {
+    color: #fff;
   }
   &.active {
     background: rgba(255, 255, 255, 1);

@@ -7,8 +7,12 @@ import "./SearchBar.scss";
 
 import { Button as ButtonPresenter } from "../Button/Button";
 import { withButtonTypeLink } from "../Button/_type/Button_type_link";
+import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon";
 
-const Button = compose(withButtonTypeLink)(ButtonPresenter);
+const Button = compose(
+  withButtonTypeLink,
+  withButtonThemeIcon
+)(ButtonPresenter);
 
 const SearchBar: FC<SearchBarProps> = ({
   children,
@@ -29,8 +33,11 @@ const SearchBar: FC<SearchBarProps> = ({
         onFocus={() => toggleActive(true)}
         onBlur={() => toggleActive(false)}
       />
-      <Button className={cnSearchBar("SearchBtn")}>
+      <Button className={cnSearchBar("SearchBtn")} theme="icon">
         <i className="fas fa-search"></i>
+      </Button>
+      <Button className={cnSearchBar("PicBtn")} theme="icon">
+        <i className="fas fa-camera"></i>
       </Button>
       {children}
     </Component>

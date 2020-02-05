@@ -1,7 +1,4 @@
-@import "../Button";
-
 .Button_type_link {
-  @extend .Button;
   color: inherit;
   text-decoration: none;
 }

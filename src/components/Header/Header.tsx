@@ -1,9 +1,19 @@
 import React from "react";
+import { compose, composeU } from "@bem-react/core";
 import { cn } from "@bem-react/classname";
 
 import "./Header.scss";
 
 import SearchBar from "../SearchBar/SearchBar";
+
+import { Button as ButtonPresenter } from "../Button/Button";
+import { withButtonTypeLink } from "../Button/_type/Button_type_link";
+import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon";
+
+const Button = compose(
+  withButtonTypeLink,
+  withButtonThemeIcon
+)(ButtonPresenter);
 
 class Header extends React.Component {
   state = {
@@ -29,32 +39,63 @@ class Header extends React.Component {
     });
   }
   render() {
-    const Header = cn("Header");
+    const cnHeader = cn("Header");
 
     return (
-      <header className={Header()}>
+      <header className={cnHeader()}>
         <div
-          className={Header("Top")}
+          className={cnHeader("Top")}
           style={{ top: parseFloat(this.state.offset) * 0.8 }}
         >
           <img
-            className={Header("Top-Logo")}
+            className={cnHeader("Top-Logo")}
             src="//static.wbstatic.net/i/header/logo.svg"
             alt=""
           />
-          <SearchBar className={Header("Top-Search")} />
+          <SearchBar className={cnHeader("Top-Search")} />
 
-          <div className={Header("Top-UserMenu")}>
-            <a className={Header("Top-UserMenu-Item Map")} href="">
-              <i className="fas fa-map-marker-alt"></i>
-              <p className={Header("Top-UserMenu-Item-Name")}>Адреса</p>
-            </a>
-            <a className={Header("Top-UserMenu-Item Delivery")} href=""></a>
-            <a className={Header("Top-UserMenu-Item Profile")} href=""></a>
-            <a className={Header("Top-UserMenu-Item Basket")} href=""></a>
+          <div className={cnHeader("Top-UserMenu")}>
+            <Button className={cnHeader("Top-UserMenu-Item Map")} type="link">
+              <i
+                className={cnHeader(
+                  "Top-UserMenu-Item-Icon fas fa-map-marker-alt"
+                )}
+              ></i>
+              <p className={cnHeader("Top-UserMenu-Item-Title")}>Адреса</p>
+            </Button>
+            <Button
+              className={cnHeader("Top-UserMenu-Item Delivery")}
+              type="link"
+            >
+              <i
+                className={cnHeader(
+                  "Top-UserMenu-Item-Icon fas fa-shipping-fast"
+                )}
+              ></i>
+              <p className={cnHeader("Top-UserMenu-Item-Title")}>Доставка</p>
+            </Button>
+
+            <Button
+              className={cnHeader("Top-UserMenu-Item Profile")}
+              type="link"
+            >
+              <i className={cnHeader("Top-UserMenu-Item-Icon fas fa-user")}></i>
+              <p className={cnHeader("Top-UserMenu-Item-Title")}>Профиль</p>
+            </Button>
+            <Button
+              className={cnHeader("Top-UserMenu-Item Basket")}
+              type="link"
+            >
+              <i
+                className={cnHeader(
+                  "Top-UserMenu-Item-Icon fas fa-shopping-cart"
+                )}
+              ></i>
+              <p className={cnHeader("Top-UserMenu-Item-Title")}>Корзина</p>
+            </Button>
           </div>
         </div>
-        <nav className={Header("Bottom")}></nav>
+        <nav className={cnHeader("Bottom")}></nav>
       </header>
     );
   }

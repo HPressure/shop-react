@@ -1,9 +1,11 @@
+@import "../../variables";
 .Header {
   position: relative;
   display: flex;
   background: red;
   min-width: 100%;
   overflow: hidden;
+  padding: 0px $pageSidePadding 11px $pageSidePadding;
   background: linear-gradient(
     90deg,
     rgba(72, 17, 115, 1) 0%,
@@ -24,10 +26,21 @@
       line-height: 24px;
     }
     .Header-Top-UserMenu {
+      margin-left: 30px;
       display: flex;
       .Header-Top-UserMenu-Item {
         color: #fff;
-        font-size: 2rem;
+        margin-right: 30px;
+        .Header-Top-UserMenu-Item-Icon {
+          display: block;
+          text-align: center;
+          font-size: 25px;
+        }
+        .Header-Top-UserMenu-Item-Title {
+          font-size: 16px;
+          padding-top: 5px;
+          font-weight: 900;
+        }
       }
     }
   }
