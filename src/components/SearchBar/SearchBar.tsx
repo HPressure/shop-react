@@ -33,10 +33,10 @@ const SearchBar: FC<SearchBarProps> = ({
         onFocus={() => toggleActive(true)}
         onBlur={() => toggleActive(false)}
       />
-      <Button className={cnSearchBar("SearchBtn")} theme="icon">
+      <Button className={cnSearchBar("BarBtn SearchBtn")} theme="icon">
         <i className="fas fa-search"></i>
       </Button>
-      <Button className={cnSearchBar("PicBtn")} theme="icon">
+      <Button className={cnSearchBar("BarBtn PicBtn")} theme="icon">
         <i className="fas fa-camera"></i>
       </Button>
       {children}

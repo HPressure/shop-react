@@ -95,7 +95,44 @@ class Header extends React.Component {
             </Button>
           </div>
         </div>
-        <nav className={cnHeader("Bottom")}></nav>
+        <nav className={cnHeader("Bottom")}>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Мужчинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Женщинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Детям
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Мужчинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Женщинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Детям
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Мужчинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Женщинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Детям
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Мужчинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Женщинам
+          </Button>
+          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+            Детям
+          </Button>
+        </nav>
       </header>
     );
   }

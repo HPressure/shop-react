@@ -3,22 +3,27 @@
   background: rgba(255, 255, 255, 0.5);
   font-size: inherit;
   border-radius: 4px;
-  padding: 0.4em 0.4em 0.4em 0.8em;
+  padding: 0.4em 0.8em;
   transition: background 0.3s ease-in;
+  color: #fff;
   #{&}-Input {
     cursor: pointer;
     border: none;
     background: none;
     width: 100%;
+    color: #000;
     &::placeholder {
       color: #fff;
     }
   }
-  #{&}-SearchBtn {
-    color: #fff;
+  #{&}-BarBtn {
+    color: inherit;
+    opacity: 0.5;
   }
-  #{&}-PicBtn {
-    color: #fff;
+  & .SearchBtn {
+  }
+  & .PicBtn {
+    margin-left: 10px;
   }
   &.active {
     background: rgba(255, 255, 255, 1);
