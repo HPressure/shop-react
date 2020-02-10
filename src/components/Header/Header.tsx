@@ -42,11 +42,11 @@ class Header extends React.Component {
     const cnHeader = cn("Header");
 
     return (
-      <header className={cnHeader()}>
-        <div
-          className={cnHeader("Top")}
-          style={{ top: parseFloat(this.state.offset) * 0.8 }}
-        >
+      <header
+        className={cnHeader()}
+        style={{ top: parseFloat(this.state.offset) * 0.6 }}
+      >
+        <div className={cnHeader("Top")}>
           <img
             className={cnHeader("Top-Logo")}
             src="//static.wbstatic.net/i/header/logo.svg"

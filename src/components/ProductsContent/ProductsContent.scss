@@ -1,4 +1,7 @@
+@import "../../variables";
 .ProductsContent {
-  display: flex;
-  min-width: 100%;
+  padding: 0 $pageSidePadding;
+  #{&}-TopCarousel {
+    margin: 0 auto;
+  }
 }

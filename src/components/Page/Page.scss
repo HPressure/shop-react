@@ -5,10 +5,11 @@
     flex: 0;
   }
   .Page-Main {
-    position: relative;
+    position: sticky;
+    background: #fff;
+
+    min-height: 2000px;
     flex: 1;
-    border-radius: 10px;
-    background: green;
     &::before {
       content: "";
       position: absolute;
@@ -18,8 +19,22 @@
       background-color: #fff;
       border-radius: 12px 12px 0 0;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      height: 12px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 0 0 12px 12px;
+    }
   }
   .Page-Footer {
     flex: 0;
+    position: sticky;
+    min-height: 300px;
+    bottom: 0px;
+    z-index: -1;
+    background: #481173;
   }
 }

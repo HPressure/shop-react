@@ -5,6 +5,7 @@ import "./Page.scss";
 
 import Header from "../Header/Header";
 import ProductsContent from "../ProductsContent/ProductsContent";
+import Footer from "../Footer/Footer";
 function Page() {
   const Page = cn("Page");
   return (
@@ -16,7 +17,7 @@ function Page() {
       <main className={Page("Main")}>
         <ProductsContent />
       </main>
-      <footer className={Page("Footer")}></footer>
+      <Footer className={Page("Footer")} />
     </>
   );
 }
