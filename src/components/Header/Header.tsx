@@ -1,5 +1,5 @@
 import React from "react";
-import { compose, composeU } from "@bem-react/core";
+import { compose } from "@bem-react/core";
 import { cn } from "@bem-react/classname";
 
 import "./Header.scss";
