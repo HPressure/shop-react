@@ -1,24 +1,31 @@
 import React from "react";
 import { cn } from "@bem-react/classname";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./Page.scss";
 
 import Header from "../Header/Header";
-import ProductsContent from "../ProductsContent/ProductsContent";
+import HomePage from "../HomePage/HomePage.js";
+import ProductsPage from "../ProductsPage/ProductsPage.js";
 import Footer from "../Footer/Footer";
 function Page() {
   const Page = cn("Page");
   return (
-    <>
-      <div className={Page("Header")}>
-        <Header />
-      </div>
+    <Router>
+      <Header className={Page("Header")} />
 
       <main className={Page("Main")}>
-        <ProductsContent />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/products">
+            <ProductsPage />
+          </Route>
+        </Switch>
       </main>
       <Footer className={Page("Footer")} />
-    </>
+    </Router>
   );
 }
 

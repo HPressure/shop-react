@@ -4,16 +4,20 @@
   flex-flow: column;
   .Page-Header {
     flex: 0;
+    padding: 40px $pageSidePadding;
   }
   .Page-Main {
     position: sticky;
     background: #fff;
+    padding: 20px $pageSidePadding;
     z-index: 1;
     min-height: 1000px;
     flex: 1;
+
     &::before {
       content: "";
       position: absolute;
+      left: 0;
       top: -11px;
       height: 12px;
       width: 100%;
@@ -23,6 +27,7 @@
     &::after {
       content: "";
       position: absolute;
+      left: 0;
       bottom: -11px;
       height: 12px;
       width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import { compose } from "@bem-react/core";
 import { cn } from "@bem-react/classname";
+import { Link } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -20,10 +21,7 @@ class Header extends React.Component {
     offset: "",
     headers: []
   };
-  componentWillMount() {
-    // fetch("/").then(data => this.setState({ headers: data }));
-    // console.log(this.state.headers);
-  }
+  componentWillMount() {}
   componentDidMount() {
     window.addEventListener("scroll", () => {
       this.setState({
@@ -43,15 +41,18 @@ class Header extends React.Component {
 
     return (
       <header
-        className={cnHeader()}
+        className={cnHeader({}, [this.props.className])}
         style={{ top: parseFloat(this.state.offset) * 0.6 }}
       >
         <div className={cnHeader("Top")}>
-          <img
-            className={cnHeader("Top-Logo")}
-            src="//static.wbstatic.net/i/header/logo.svg"
-            alt=""
-          />
+          <Link className={cnHeader("Top-Logo")} to="/">
+            <img
+              className={cnHeader("Top-Logo-Img")}
+              src="//static.wbstatic.net/i/header/logo.svg"
+              alt=""
+            />
+          </Link>
+
           <SearchBar className={cnHeader("Top-Search")} />
 
           <div className={cnHeader("Top-UserMenu")}>
@@ -96,9 +97,12 @@ class Header extends React.Component {
           </div>
         </div>
         <nav className={cnHeader("Bottom")}>
-          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+          <Link
+            to={{ pathname: "/products", search: "?m" }}
+            className={cnHeader("Bottom-NavElem")}
+          >
             Мужчинам
-          </Button>
+          </Link>
           <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
             Женщинам
           </Button>
