@@ -1,7 +1,8 @@
+@import "../../variables";
 .Footer {
   color: #fff;
 
-  background: #481173;
+  background: $main-color;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -20,7 +21,7 @@
     transition: background 0.1s ease-in;
     &:hover {
       background: #fff;
-      color: #481173;
+      color: $main-color;
     }
   }
 }
@@ -109,7 +110,7 @@
       font-size: 20px;
       &:hover {
         background: #fff;
-        color: #481173;
+        color: $main-color;
       }
     }
   }

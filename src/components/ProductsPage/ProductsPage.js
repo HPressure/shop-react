@@ -19,9 +19,21 @@ class ProductsPage extends React.Component {
       });
   }
   render() {
-    let products = this.state.products.map((item, i) => (
-      <ProductCard key={i} title={item.name} imgUrl={item.imgUrl} />
-    ));
+    let products = this.state.products.map(item => {
+      return item.type.map((type, i) => {
+        return (
+          <ProductCard
+            key={i}
+            product={item}
+            title={type.name}
+            imgUrl={type.imgUrl}
+            price={type.price}
+            type={type.typeId}
+            color={type.colorId}
+          />
+        );
+      });
+    });
     const Products = cn("Products");
     return <div className={Products()}>{products}</div>;
   }

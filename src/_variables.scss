@@ -3,4 +3,30 @@ $media: (
   tablet: 768px,
   mobile: 320px
 );
-$pageSidePadding: 30px;
+$page-side-padding: 30px;
+
+$main-color: #481173;
+
+$header-first-color: #481173;
+$header-second-color: #fd1d1d;
+$header-third-color: #fcb045;
+
+$main-text-color: #2d2d2d;
+$price-color: #666;
+$border-color: #c0c0c0;
+
+$white-color: #fff;
+$black-color: #000;
+$blue-color: #45bdf5;
+$yellow-color: #ffff74;
+$green-color: #2fe047;
+$red-color: #f74949;
+
+$color-filter: (
+  1: $white-color,
+  2: $black-color,
+  3: $blue-color,
+  4: $yellow-color,
+  5: $green-color,
+  6: $red-color
+);

@@ -4,12 +4,12 @@
   flex-flow: column;
   .Page-Header {
     flex: 0;
-    padding: 40px $pageSidePadding;
+    padding: 40px $page-side-padding;
   }
   .Page-Main {
     position: sticky;
     background: #fff;
-    padding: 20px $pageSidePadding;
+    padding: 20px $page-side-padding;
     z-index: 1;
     min-height: 1000px;
     flex: 1;
@@ -41,6 +41,6 @@
     flex: 0;
     bottom: 0px;
     min-height: 300px;
-    padding: $pageSidePadding;
+    padding: $page-side-padding;
   }
 }
