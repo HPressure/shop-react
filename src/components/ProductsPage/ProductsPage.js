@@ -25,9 +25,6 @@ class ProductsPage extends React.Component {
           <ProductCard
             key={i}
             product={item}
-            title={type.name}
-            imgUrl={type.imgUrl}
-            price={type.price}
             type={type.typeId}
             color={type.colorId}
           />

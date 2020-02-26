@@ -25,40 +25,48 @@ class ProductCard extends React.Component {
       color: this.props.color
     });
   }
+  handleTypeChange = type => {
+    this.setState({
+      currType: type
+    });
+  };
   getTypes = () => {
     return this.props.product.type.map(item => (
       <Button
         theme="icon"
         className="ColorPick"
+        type={item.typeId}
+        onClick={() => this.handleTypeChange(item.typeId)}
         style={{
           background: colorFilter[item.colorId],
-          border: item.colorId == this.state.color && "solid 1px gray"
+          border: item.typeId == this.state.currType && "solid 1px gray"
         }}
       ></Button>
     ));
   };
-  render() {
-    const cnProductCard = cn("ProductCard");
 
+  render() {
+    const currProdObj = this.props.product.type[this.state.currType - 1];
+    const cnProductCard = cn("ProductCard");
     return (
       <article className={cnProductCard()}>
         <div className={cnProductCard("Top")}>
           <div
-            className={cnProductCard("ColorBar")}
+            className={cnProductCard("Top-ColorBar")}
             style={{ display: this.props.product.type.length == 1 && "none" }}
           >
             {this.getTypes()}
           </div>
           <img
             className={cnProductCard("Top-Img")}
-            src={this.props.imgUrl}
+            src={currProdObj.imgUrl}
             alt=""
           />
         </div>
 
         <div className={cnProductCard("Info")}>
-          <p className={cnProductCard("Info-Title")}>{this.props.title}</p>
-          <p className={cnProductCard("Info-Price")}>{this.props.price}</p>
+          <p className={cnProductCard("Info-Title")}>{currProdObj.name}</p>
+          <p className={cnProductCard("Info-Price")}>{currProdObj.price}</p>
         </div>
       </article>
     );
