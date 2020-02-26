@@ -5,6 +5,12 @@
   .Page-Header {
     flex: 0;
     padding: 40px $page-side-padding;
+    background: linear-gradient(
+      90deg,
+      $header-first-color 0%,
+      $header-second-color 71%,
+      $header-third-color 100%
+    );
   }
   .Page-Main {
     position: sticky;

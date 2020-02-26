@@ -11,12 +11,12 @@
   overflow: hidden;
   .ProductCard-Top {
     position: relative;
+    overflow: hidden;
     .ProductCard-Top-ColorBar {
       position: absolute;
       left: 0;
       opacity: 0;
       transition: all 0.2s ease-in;
-      background: rgba(255, 255, 255, 0.178);
       width: fit-content;
       margin: 0 auto;
       padding: 5px 5px;
@@ -32,6 +32,9 @@
       display: block;
       width: 100%;
       border-radius: 8px;
+    }
+    .ProductCard-Top-AddToFavButton {
+      bottom: 40px;
     }
   }
 

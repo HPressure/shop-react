@@ -2,6 +2,8 @@ import React from "react";
 import { compose } from "@bem-react/core";
 import { cn } from "@bem-react/classname";
 
+import "../AddToFavButton/AddToFavButton";
+
 import "./ProductCard.scss";
 
 import colorFilter from "../../js/colors";
@@ -9,6 +11,7 @@ import colorFilter from "../../js/colors";
 import { Button as ButtonPresenter } from "../Button/Button";
 import { withButtonTypeLink } from "../Button/_type/Button_type_link";
 import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon";
+import AddToFavButton from "../AddToFavButton/AddToFavButton";
 const Button = compose(
   withButtonTypeLink,
   withButtonThemeIcon
@@ -62,6 +65,7 @@ class ProductCard extends React.Component {
             src={currProdObj.imgUrl}
             alt=""
           />
+          <AddToFavButton className={cnProductCard("Top")} />
         </div>
 
         <div className={cnProductCard("Info")}>

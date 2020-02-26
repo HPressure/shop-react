@@ -12,7 +12,9 @@ function Page() {
   const Page = cn("Page");
   return (
     <Router>
-      <Header className={Page("Header")} />
+      <div className={Page("Header")}>
+        <Header />
+      </div>
 
       <main className={Page("Main")}>
         <Switch>
