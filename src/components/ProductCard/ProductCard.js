@@ -65,7 +65,13 @@ class ProductCard extends React.Component {
             src={currProdObj.imgUrl}
             alt=""
           />
-          <AddToFavButton className={cnProductCard("Top")} />
+          <AddToFavButton
+            className={cnProductCard("Top-Fav")}
+            product={{
+              prodId: this.props.product.id,
+              typeId: currProdObj.typeId
+            }}
+          />
         </div>
 
         <div className={cnProductCard("Info")}>

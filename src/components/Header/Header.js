@@ -98,7 +98,7 @@ class Header extends React.Component {
         </div>
         <nav className={cnHeader("Bottom")}>
           <Link
-            to={{ pathname: "/products", search: "?m" }}
+            to={{ pathname: "/products", search: "" }}
             className={cnHeader("Bottom-NavElem")}
           >
             Мужчинам
