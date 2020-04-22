@@ -10,8 +10,8 @@ import HomePage from "../HomePage/HomePage.js";
 import ProductsPage from "../ProductsPage/ProductsPage.js";
 import Footer from "../Footer/Footer";
 class Page extends React.Component {
-  addToFav = fav => {
-    this.setState(prevState => {
+  addToFav = (fav) => {
+    this.setState((prevState) => {
       let tmp = prevState.fav;
       let exists = false;
       let ind = 0;
@@ -22,18 +22,20 @@ class Page extends React.Component {
         }
       }
       exists ? tmp.splice(ind, 1) : tmp.push(fav);
+      localStorage.setItem("favourites", JSON.stringify(tmp));
       return {
-        fav: tmp
+        fav: tmp,
       };
     });
   };
   state = {
     fav: [],
-    addToFav: this.addToFav
+    addToFav: this.addToFav,
   };
-
+  componentDidMount() {
+    this.setState({ fav: JSON.parse(localStorage.getItem("favourites")) });
+  }
   render() {
-    // console.log(this.state.fav);
     const Page = cn("Page");
     return (
       <Router>
