@@ -19,20 +19,20 @@ const Button = compose(
 class Header extends React.Component {
   state = {
     offset: "",
-    headers: []
+    headers: [],
   };
   componentWillMount() {}
   componentDidMount() {
     window.addEventListener("scroll", () => {
       this.setState({
-        offset: window.pageYOffset
+        offset: window.pageYOffset,
       });
     });
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", () => {
       this.setState({
-        offset: window.pageYOffset
+        offset: window.pageYOffset,
       });
     });
   }
@@ -98,14 +98,17 @@ class Header extends React.Component {
         </div>
         <nav className={cnHeader("Bottom")}>
           <Link
-            to={{ pathname: "/products", search: "" }}
+            to={{ pathname: "/productTypes", search: "sex=m" }}
             className={cnHeader("Bottom-NavElem")}
           >
             Мужчинам
           </Link>
-          <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
+          <Link
+            to={{ pathname: "/productTypes", search: "sex=f" }}
+            className={cnHeader("Bottom-NavElem")}
+          >
             Женщинам
-          </Button>
+          </Link>
           <Button type="link" href="#" className={cnHeader("Bottom-NavElem")}>
             Детям
           </Button>

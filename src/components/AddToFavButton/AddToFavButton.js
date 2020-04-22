@@ -13,10 +13,8 @@ const Button = compose(
   withButtonTypeLink,
   withButtonThemeIcon
 )(ButtonPresenter);
-function check_favs(arr, product) {
-  let tmp = arr.filter(
-    item => item.prodId === product.prodId && item.typeId === product.typeId
-  );
+function check_favs(fav, typeId) {
+  let tmp = fav.filter((item) => item === typeId);
   return tmp.length;
 }
 function AddToFavButton(props) {
@@ -26,16 +24,16 @@ function AddToFavButton(props) {
       {({ fav, addToFav }) => (
         <Button
           theme="icon"
-          onClick={() => addToFav(props.product)}
+          onClick={() => addToFav(props.typeId)}
           className={cnAddToFavButton({}, [props.className])}
         >
           <i
             className={cnAddToFavButton("Icon fas fa-heart")}
             style={
-              check_favs(fav, props.product) > 0
+              check_favs(fav, props.typeId) > 0
                 ? {
                     opacity: "1",
-                    color: "#481173"
+                    color: "#481173",
                   }
                 : {}
             }

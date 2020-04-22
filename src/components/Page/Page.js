@@ -11,17 +11,13 @@ import ProductsPage from "../ProductsPage/ProductsPage.js";
 import Footer from "../Footer/Footer";
 class Page extends React.Component {
   addToFav = (fav) => {
-    this.setState((prevState) => {
-      let tmp = prevState.fav;
-      let exists = false;
-      let ind = 0;
-      for (let i = 0; i < tmp.length; i++) {
-        if (tmp[i].prodId === fav.prodId && tmp[i].typeId === fav.typeId) {
-          ind = i;
-          exists = true;
-        }
-      }
-      exists ? tmp.splice(ind, 1) : tmp.push(fav);
+    this.setState(() => {
+      let tmp = this.state.fav;
+
+      var ind = tmp.findIndex((i) => i === fav);
+      console.log(ind);
+
+      ind == -1 ? tmp.push(fav) : tmp.splice(ind, 1);
       localStorage.setItem("favourites", JSON.stringify(tmp));
       return {
         fav: tmp,
@@ -33,6 +29,9 @@ class Page extends React.Component {
     addToFav: this.addToFav,
   };
   componentDidMount() {
+    !localStorage.getItem("favourites") &&
+      localStorage.setItem("favourites", JSON.stringify([]));
+
     this.setState({ fav: JSON.parse(localStorage.getItem("favourites")) });
   }
   render() {
@@ -49,9 +48,7 @@ class Page extends React.Component {
               <Route exact path="/">
                 <HomePage />
               </Route>
-              <Route path="/products">
-                <ProductsPage />
-              </Route>
+              <Route path="/productTypes" component={ProductsPage} />
             </Switch>
           </main>
           <Footer className={Page("Footer")} />
