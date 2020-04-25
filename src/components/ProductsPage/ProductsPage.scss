@@ -3,4 +3,11 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .ProductsPage-StickyFilter_fixed {
+    position: fixed;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
 }
