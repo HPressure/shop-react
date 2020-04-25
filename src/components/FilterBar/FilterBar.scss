@@ -1,0 +1,18 @@
+.FilterBar {
+  // position: fixed;
+  // width: 100vw;
+
+  height: 30px;
+  border-bottom: 1px solid gray;
+  background: #fff;
+  // z-index: 2;
+  //  top: 0;
+  // left: 0;
+}
+.FilterBar_fixed {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}

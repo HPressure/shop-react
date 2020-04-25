@@ -28,15 +28,11 @@ function AddToFavButton(props) {
           className={cnAddToFavButton({}, [props.className])}
         >
           <i
-            className={cnAddToFavButton("Icon fas fa-heart")}
-            style={
-              check_favs(fav, props.typeId) > 0
-                ? {
-                    opacity: "1",
-                    color: "#481173",
-                  }
-                : {}
-            }
+            className={cnAddToFavButton(
+              "Icon",
+              { active: check_favs(fav, props.typeId) > 0 },
+              ["fas fa-heart"]
+            )}
           ></i>
         </Button>
       )}

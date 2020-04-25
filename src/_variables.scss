@@ -1,7 +1,7 @@
 $media: (
   desktop: 1024px,
   tablet: 768px,
-  mobile: 320px
+  mobile: 320px,
 );
 $page-side-padding: 30px;
 
@@ -22,11 +22,13 @@ $yellow-color: #ffff74;
 $green-color: #2fe047;
 $red-color: #f74949;
 
+$fav-icon-color: rgb(224, 48, 48);
+
 $color-filter: (
   1: $white-color,
   2: $black-color,
   3: $blue-color,
   4: $yellow-color,
   5: $green-color,
-  6: $red-color
+  6: $red-color,
 );

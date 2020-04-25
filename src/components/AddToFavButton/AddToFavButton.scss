@@ -16,4 +16,8 @@
       opacity: 0.5;
     }
   }
+  .AddToFavButton-Icon_active {
+    color: $fav-icon-color;
+    opacity: 1;
+  }
 }
