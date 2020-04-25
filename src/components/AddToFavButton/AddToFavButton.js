@@ -7,8 +7,8 @@ import FavContext from "../../js/fav-context";
 import "./AddToFavButton.scss";
 
 import { Button as ButtonPresenter } from "../Button/Button";
-import { withButtonTypeLink } from "../Button/_type/Button_type_link";
-import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon";
+import { withButtonTypeLink } from "../Button/_type/Button_type_link/Button_type_link";
+import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon/Button_theme_icon";
 const Button = compose(
   withButtonTypeLink,
   withButtonThemeIcon

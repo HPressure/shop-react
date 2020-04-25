@@ -6,9 +6,9 @@ import { cn } from "@bem-react/classname";
 import "./Footer.scss";
 
 import { Button as ButtonPresenter } from "../Button/Button";
-import { withButtonTypeLink } from "../Button/_type/Button_type_link";
-import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon";
-import { withButtonThemeText } from "../Button/_theme/Button_theme_text";
+import { withButtonTypeLink } from "../Button/_type/Button_type_link/Button_type_link";
+import { withButtonThemeIcon } from "../Button/_theme/Button_theme_icon/Button_theme_icon";
+import { withButtonThemeText } from "../Button/_theme/Button_theme_text/Button_theme_text";
 
 const Button = compose(
   withButtonTypeLink,

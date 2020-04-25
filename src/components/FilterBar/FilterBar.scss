@@ -1,5 +1,6 @@
 .FilterBar {
-  height: 30px;
-  border-bottom: 1px solid gray;
+  display: flex;
+  height: min-content;
+  padding: 3px 10px;
   background: #fff;
 }
